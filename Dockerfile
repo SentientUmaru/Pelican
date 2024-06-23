@@ -44,8 +44,8 @@ RUN chmod -R 755 /var/www/html/storage \
 HEALTHCHECK --interval=5m --timeout=10s --start-period=5s --retries=3 \
   CMD curl -f http://localhost/up || exit 1
 
-EXPOSE 80:2019
-EXPOSE 443
+EXPOSE 8888:2019
+EXPOSE 4433
 
 VOLUME /pelican-data
 
